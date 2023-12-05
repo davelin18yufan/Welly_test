@@ -1,4 +1,6 @@
-# React + TypeScript + Vite
+# Welly_Test
+
+## React + Typescript
 
 
 ```bash
