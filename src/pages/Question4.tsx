@@ -9,26 +9,28 @@ const Question4 = () => {
       <div>
         <button
           className={`${
-            isLogin && "text-orange-300"
-          } p-2 bg-slate-500 border outline-1 text-zinc-300 rounded-md hover:opacity-50`}
+            isLogin ? "text-orange-400" : "text-zinc-300"
+          } p-2 bg-slate-500 border outline-1  rounded-md hover:opacity-50`}
           onClick={() => setIsLogin(true)}
         >
           Login
         </button>
         <button
           className={`${
-            !isLogin && "text-orange-300"
-          } p-2 bg-slate-500 border outline-1 text-zinc-300 rounded-md hover:opacity-50`}
+            !isLogin ? "text-orange-400" : "text-zinc-300"
+          } p-2 bg-slate-500 border outline-1 rounded-md hover:opacity-50`}
           onClick={() => setIsLogin(false)}
         >
           Logout
         </button>
       </div>
       <section className="mt-4 bg-orange-200">
-        {isLogin ? <div>Log in successfully!</div> : <div>Not Login yet..</div>}
+        <div data-testid="text">
+          {isLogin ? "Log in successfully!" : "Not Login yet.."}
+        </div>
       </section>
       <p>在ＪＳＸ中使用條件式的特性根據狀態決定要render的元件</p>
-      <code>
+      <code data-testid="code">
         {`isLogin ? <div>Log in successfully!</div> : <div>Not Login yet..</div>`}
       </code>
     </>

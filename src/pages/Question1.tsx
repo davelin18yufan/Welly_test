@@ -9,7 +9,7 @@ const Question1 = () => {
       <label className="mr-3">Input:</label>
       <input className="px-2" type="text" onChange={(e) => setInput(e.target.value)} placeholder="請輸入字串"/>
 
-      <p>Reversed Output: <i>{reverseString(input)}</i></p>
+      <p>Reversed Output: <i data-testid="output">{reverseString(input)}</i></p>
     </div>
   )
 }

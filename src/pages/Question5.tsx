@@ -24,7 +24,7 @@ function App() {
         >
           -
         </button>
-        <p>Counter: {count}</p>
+        <p data-testid="counter">Counter: {count}</p>
       </div>
     </section>
   )

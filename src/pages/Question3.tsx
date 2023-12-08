@@ -20,6 +20,7 @@ const Question3 = () => {
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
           className="px-2"
+          placeholder="first name"
         />
 
         <label className="ml-2">Last Name: </label>
@@ -28,6 +29,7 @@ const Question3 = () => {
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
           className="px-2"
+          placeholder="last name"
         />
 
         <br />
@@ -42,7 +44,7 @@ const Question3 = () => {
             }`}
         </code>
       </pre>
-      <p>
+      <p data-testid="answer">
         藉由ternary operator和literal
         template使函式更簡潔並且加入型別轉換以免使用者輸入非字串格式
       </p>

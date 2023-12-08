@@ -13,7 +13,7 @@ const Question2 = () => {
       const inputNumArr: number[] = JSON.parse(input) || []
 
       // check
-      if (!Array.isArray(inputNumArr)) return alert("請輸入正確字元")
+      if (!Array.isArray(inputNumArr)) throw new Error("請輸入正確字元")
       if (inputNumArr.some((num) => typeof num !== "number" || Number.isNaN(num))) {
         throw new Error("請依照指示輸入")
       }
@@ -42,11 +42,11 @@ const Question2 = () => {
         >
           Submit
         </button>
-        <p className="text-sm text-slate-700/50">請依照JSON格式輸入數字陣列</p>
+        <p className="text-sm text-slate-700/50">請依照格式輸入數字陣列</p>
       </div>
 
-      <p>
-        Filtered Output: <i>{result ? result : "null"}</i>
+      <p >
+        Filtered Output: <i data-testid="output">{result ? result : "null"}</i>
       </p>
     </div>
   )
