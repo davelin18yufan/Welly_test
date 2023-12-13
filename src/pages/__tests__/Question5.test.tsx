@@ -26,13 +26,13 @@ describe("Question_5", () => {
     const counter = screen.getByTestId("counter")
 
     await user.click(plusBtn)
-    expect(counter.textContent).toBe("Counter: 1")
+    expect(counter).toHaveTextContent("Counter: 1")
 
     await user.click(minusBtn)
-    expect(counter.textContent).toBe("Counter: 0")
+    expect(counter).toHaveTextContent("Counter: 0")
 
     // already 0 
     await user.click(minusBtn)
-    expect(counter.textContent).toBe("Counter: 0")
+    expect(counter).toHaveTextContent("Counter: 0")
   })
 })

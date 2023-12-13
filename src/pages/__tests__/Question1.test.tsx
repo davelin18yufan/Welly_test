@@ -23,6 +23,6 @@ describe("Question_1", () => {
     const output = screen.getByTestId("output")
 
     await user.type(input, 'hello')
-    expect(output.textContent).toBe('olleh')
+    expect(output).toHaveTextContent("olleh")
   })
 })

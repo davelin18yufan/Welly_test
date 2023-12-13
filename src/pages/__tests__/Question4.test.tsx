@@ -25,6 +25,6 @@ describe("Question_4", () => {
     const text = screen.getByTestId("text")
 
     await user.click(loginBtn)
-    expect(text.textContent).toBe("Log in successfully!")
+    expect(text).toHaveTextContent("Log in successfully!")
   })
 })

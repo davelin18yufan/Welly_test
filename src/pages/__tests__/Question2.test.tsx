@@ -29,7 +29,7 @@ describe("Question_2", () => {
     fireEvent.change(input, {target: {value: "[4,5,6,7]"}})
     fireEvent.click(btn)
 
-    expect(output.textContent).toBe("6,7")
+    expect(output).toHaveTextContent("6,7")
   })
 
   test("Input formation accept only numbers array", async () => {
@@ -45,7 +45,7 @@ describe("Question_2", () => {
     await user.type(input, "01fh5")
     await user.click(btn)
 
-    expect(output.textContent).toBe("null")
+    expect(output).toHaveTextContent("null")
     expect(alertMock).toHaveBeenCalledWith("請輸入正確字元")
 
     // reset
